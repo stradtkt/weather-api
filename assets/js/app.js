@@ -8,7 +8,8 @@ $(document).ready(function() {
       var html = '';
       html += '<p class="lead">'+res.name+'</p>';
       html += '<p>'+res.weather[0].description+'</p>';
-      html += '<p>'+res.main.temp+'</p>'
+      html += '<p>'+res.main.temp+' F&deg;</p>';
+      html += '<p>Wind Speed: '+res.wind.speed+'</p>';
       $('.weather').html(html);
     }, 'jsonp');
     return false;
